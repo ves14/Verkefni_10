@@ -1,5 +1,7 @@
 // todo vísa í rétta hluti með import
 
+
+console.log(URL);
 // breytur til þess að halda utan um html element nodes
 let title; // titill fyrir mynd á forsíðu
 let text; // texti fyrir mynd á forsíðu

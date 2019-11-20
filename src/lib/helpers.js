@@ -35,6 +35,21 @@ export function el(name, ...children) {
 /**
 * Skilar tölu af handahófi á bilinu [min, max]
 */
-export function randomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+let date1;
+let date2;
+export function randomDate(date1, date2) {
+  function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  date1 = date1 || '06/16/1995'
+  date2 = date2 || new Date().toLocaleDateString()
+  date1 = new Date(date1).getTime()
+  date2 = new Date(date2).getTime()
+
+
+  if (date1 > date2){
+    return new Date(randomNumber(date2, date1));
+} else {
+  return new Date(randomNumber(date1, date2));
+}
 }

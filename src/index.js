@@ -12,3 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
     init(apod);
   }
 });
+console.log(URL);
+
